@@ -1,3 +1,7 @@
+![.NET Core](https://github.com/jason-kerney/whats-your-version/workflows/.NET%20Core/badge.svg)
+[![License](https://img.shields.io/github/license/jason-kerney/whats-your-version)](https://github.com/jason-kerney/whats-your-version/blob/main/LICENSE)
+[![Nuget](https://img.shields.io/nuget/v/whats-your-version.svg)](https://www.nuget.org/packages/whats-your-version/)
+
 # Introduction 
 I simple way to make an assembly's version information availible to consumers within that assembly.
 
