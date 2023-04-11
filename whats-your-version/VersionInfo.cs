@@ -4,6 +4,14 @@ namespace WhatsYourVersion
 {
     public class VersionInfo : IEquatable<VersionInfo>
     {
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((Version != null ? Version.GetHashCode() : 0) * 397) ^ (BuildDateUtc != null ? BuildDateUtc.GetHashCode() : 0);
+            }
+        }
+
         public bool Equals(VersionInfo other)
         {
             if (ReferenceEquals(null, other)) return false;
@@ -17,11 +25,6 @@ namespace WhatsYourVersion
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
             return Equals((VersionInfo) obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Version, BuildDateUtc);
         }
 
         public static bool operator ==(VersionInfo left, VersionInfo right)
