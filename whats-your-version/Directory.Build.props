@@ -1,7 +1,11 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>2.3.0.0</VersionPrefix>
-    <FileVersion>2.3.0.0</FileVersion>
-    <InformationalVersion>2.3.0.0</InformationalVersion>
+    <VersionMajor>2</VersionMajor>
+    <VersionMinor>3</VersionMinor>
+    <VersionPatch>0</VersionPatch>
+
+    <VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
+    <FileVersion>$(VersionMajor).$(VersionMinor).$(VersionPatch).0</FileVersion>
+    <InformationalVersion>$(VersionPrefix)</InformationalVersion>
   </PropertyGroup>
 </Project>
